@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// O generator é o gerador de código do banco de dados.
+generator client {
+  provider = "prisma-client-js" // O provider é o gerador de código que será utilizado.
+}
+
+// O datasource é a fonte de dados do banco de dados.
+datasource db {
+  provider = "mongodb" // O provider é o banco de dados que será utilizado.
+  url      = env("DATABASE_URL") // A url é a url de conexão com o banco de dados.
+}
+
+// O model é o modelo de dados do banco de dados, ou seja, é a tabela do banco de dados.
+model User {
+  // O id é uma string que é o id do usuário, o @id é para dizer que é o id do usuário, o @default é para dizer que o id é gerado automaticamente, o auto() é para dizer que o id é gerado automaticamente, o @map é para dizer que o id é o _id do banco de dados e o @db.ObjectId é para dizer que o id é um ObjectId do banco de dados.
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  username String @unique // O username é uma string que é o nome de usuário do usuário, o @unique é para dizer que o username é único.
+
+  email String @unique // O email é uma string que é o email do usuário, o @unique é para dizer que o email é único.
+
+  password String // A senha é uma string que é a senha do usuário.
+
+  token String // O token é uma string que é o token do usuário.
+
+  @@map("users") // O @@map é para dizer que o model é a tabela users do banco de dados.
+}
