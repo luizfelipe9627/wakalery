@@ -4,16 +4,16 @@
 
 Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incríveis da natureza! Este projeto é meu primeiro passo no mundo FullStack, combinando o poder do React e TypeScript no front-end com a robustez do Node.js com TypeScript no back-end.
 
-# Funcionalidades
+## Funcionalidades
 
 - **Login de Usuários**: Faça login para acessar o conteúdo do Wakalery.
 - **Cadastro de Usuários**: Cadastre-se para ter acesso total ao Wakalery.
 - **Exploração de Fotos**: Explore as fotos mais recentes e populares do Wakalery.
 - **Autorização de Usuários**: Apenas usuários autenticados podem ter total acesso as páginas do Wakalery.
 
-# Tecnologias
+## Tecnologias
 
-## Frontend
+### Frontend
 
 - [React](https://pt-br.reactjs.org/)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
@@ -23,7 +23,7 @@ Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incr�
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 
-## Backend
+### Backend
 
 - [Node.js](https://nodejs.org/en/)
 - [Fastify](https://www.fastify.io/)
@@ -35,14 +35,14 @@ Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incr�
 - [MongoDB](https://www.mongodb.com/)
 - [tsx](https://www.npmjs.com/package/tsx)
 
-# Instalação
+## Instalação
 
 Para instalar e iniciar o projeto, siga os passos dos READMEs de cada pasta:
 
 - [Backend](./backend/README.md)
 - [Frontend](./frontend/README.md)
 
-# Autor e Licença
+## Autor e Licença
 
 Este projeto foi desenvolvido por [Luiz Felipe Silva](https://github.com/luizfelipe9627), e está sob a licença MIT. Para mais informações, acesse o arquivo [LICENSE](./LICENSE).
 
