@@ -23,7 +23,7 @@ model User {
 
   password String // A senha é uma string que é a senha do usuário.
 
-  token String // O token é uma string que é o token do usuário.
+  token String? // O token é uma string que é o token do usuário.
 
   @@map("users") // O @@map é para dizer que o model é a tabela users do banco de dados.
 }

@@ -26,7 +26,7 @@ const Login = () => {
       const responseLogin = await api.post("/login", { username, password });
       const token = responseLogin.data[0].token;
 
-      const responseUser = await api.post("/token", { token });
+      const responseUser = await api.post("/auth", { token });
       const user = responseUser.data[0];
       setUser(user);
 

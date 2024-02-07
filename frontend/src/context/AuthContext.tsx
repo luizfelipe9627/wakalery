@@ -33,7 +33,7 @@ const AuthProvider = ({ children }: React.PropsWithChildren) => {
     const fetchUser = async () => {
       try {
         if (token) {
-          const responseUser = await api.post("/token", { token });
+          const responseUser = await api.post("/auth", { token });
           const fetchedUser = responseUser.data[0];
           setUser(fetchedUser);
         }

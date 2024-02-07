@@ -35,9 +35,9 @@ export default async function routes(
     },
   );
 
-  // Está criando uma rota do tipo POST responsável por mostrar as informações do usuário que foi logado, essa rota recebe o caminho /token e é uma função assíncrona(que só vai ser executada quando o await for concluído) que recebe o request do tipo FastifyRequest e o reply do tipo FastifyReply. Sendo que o request é o que está sendo enviado para o servidor e o reply é o que está sendo retornado pelo servidor.
+  // Está criando uma rota do tipo POST responsável por mostrar as informações do usuário que foi logado, essa rota recebe o caminho /auth e é uma função assíncrona(que só vai ser executada quando o await for concluído) que recebe o request do tipo FastifyRequest e o reply do tipo FastifyReply. Sendo que o request é o que está sendo enviado para o servidor e o reply é o que está sendo retornado pelo servidor.
   fastify.post(
-    "/token",
+    "/auth",
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new LoginUserController().show(request, reply); // Está retornando a função show da classe RegisterUserController, que é responsável por mostrar as informações do usuário.
     },

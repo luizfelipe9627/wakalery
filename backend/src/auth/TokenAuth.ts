@@ -1,5 +1,5 @@
 import jsonwebtoken from "jsonwebtoken"; // Está importando o jsonwebtoken, responsável por gerar o token.
-import crypto from "crypto"; // Está importando o crypto, responsável por gerar um número aleatório criptografado.
+import bycrypt from "bcrypt"; // Está importando o bcrypt, responsável por criptografar a senha.
 
 // Classe chamada TokenAuth que é responsável por autenticar o usuário, verificando se o token está correto.
 class TokenAuth {
@@ -10,7 +10,13 @@ class TokenAuth {
   async getJwtSecret() {
     // Se a variável estática jwtSecret dentro da classe TokenAuth não estiver armazenando nada, então executa o if.
     if (!TokenAuth.jwtSecret) {
-      TokenAuth.jwtSecret = crypto.randomBytes(64).toString("hex"); // Está gerando um número aleatório criptografado e armazenando na variável estática jwtSecret.
+      // Está armazenando na variável estática jwtSecret o número aleatório criptografado.
+      TokenAuth.jwtSecret = await bycrypt.hash(
+        // Está gerando um número aleatório e criptografando ele.
+        Math.random().toString(36).substring(2, 15) +
+          Math.random().toString(36).substring(2, 15),
+        10,
+      );
     }
     return TokenAuth.jwtSecret; // Está retornando a variável estática jwtSecret com o número aleatório criptografado.
   }
