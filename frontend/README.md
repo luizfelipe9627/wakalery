@@ -78,6 +78,10 @@ O front-end do Wakalery foi desenvolvido com React, utilizando TypeScript para g
 - **TypeScript:** Superset de JavaScript que adiciona tipagem estática opcional ao código.
 - **Vite:** Um construtor de aplicações web rápido, moderno e leve.
 
+## Design
+
+O design do Wakalery foi feito por [Wakasso](https://www.figma.com/@wakasso), e pode ser encontrado [aqui](https://www.figma.com/community/file/1185746292158267475).
+
 # Autor e Licença
 
 Este projeto foi desenvolvido por [Luiz Felipe Silva](https://github.com/luizfelipe9627), e está sob a licença MIT. Para mais informações, acesse o arquivo [LICENSE](./LICENSE).
