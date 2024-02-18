@@ -17,7 +17,11 @@ const start = async () => {
   // O try é responsável por tentar executar o código, caso ocorra algum erro, ele entrará no catch.
   try {
     // O await está esperando a função register do fastify para registrar o cors.
-    await app.listen({ port: 3000 }); // Está chamando a função listen do fastify e passando um objeto com a propriedade port que é 3000, responsável por rodar o servidor na porta 3000.
+    await app.listen({
+      // O port está pegando a variável de ambiente PORT(que é a porta do servidor que está na variável de ambiente da onde o servidor está hospedado) e se não tiver, ele vai usar a porta 3000.
+      port: process.env.PORT ? Number(process.env.PORT) : 3000,
+      host: "0.0.0.0",
+    });
   } catch (err) {
     process.exit(1); // O process.exit(1) é responsável por fechar o servidor caso ocorra algum erro.
   }
