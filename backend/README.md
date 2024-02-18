@@ -64,7 +64,7 @@ Para instalar e iniciar o projeto, siga os passos abaixo:
 3. Inicie o servidor
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
 ## Visão geral da API
