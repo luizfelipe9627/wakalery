@@ -22,6 +22,8 @@ const start = async () => {
       port: process.env.PORT ? Number(process.env.PORT) : 3000,
       // Está definindo o endereço do servidor(importante ser 0.0.0.0 para ocorrer tudo bem quando for hospedado).
       host: "0.0.0.0",
+      // Para rodar localmente, é necessário usar o host abaixo.
+      //host: "127.0.0.1",
     });
   } catch (err) {
     process.exit(1); // O process.exit(1) é responsável por fechar o servidor caso ocorra algum erro.
