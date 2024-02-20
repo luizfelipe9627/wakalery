@@ -3,11 +3,11 @@ import bycrypt from "bcrypt"; // Está importando o bcrypt, responsável por cri
 
 // Classe chamada TokenAuth que é responsável por autenticar o usuário, verificando se o token está correto.
 class TokenAuth {
-  // O static não pode ser acessado por uma instância da classe(acessado por fora da classe) e sim pela própria classe, sendo assim ele não mudará de valor, sendo que o valor será o mesmo para todas as instâncias da classe.
-  static jwtSecret = ""; // Criado uma variável estática chamada jwtSecret do tipo string, responsável por armazenar a chave secreta.
+  // Criado uma variável estática chamada jwtSecret do tipo string, responsável por armazenar a chave secreta. O static é responsável por permitir que a variável seja somente de
+  static jwtSecret = "";
 
-  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada getJwtSecret que não recebe nenhum parâmetro, responsável por gerar um número aleatório criptografado para ser a chave secreta(JWT_SECRET)
-  async getJwtSecret() {
+  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada getJwtSecret que não recebe nenhum parâmetro, responsável por gerar um número aleatório criptografado para ser a chave secreta(JWT_SECRET). O public é responsável por permitir que a função seja acessada por fora da classe.
+  public async getJwtSecret() {
     // Se a variável estática jwtSecret dentro da classe TokenAuth não estiver armazenando nada, então executa o if.
     if (!TokenAuth.jwtSecret) {
       // Está armazenando na variável estática jwtSecret o número aleatório criptografado.
@@ -21,8 +21,8 @@ class TokenAuth {
     return TokenAuth.jwtSecret; // Está retornando a variável estática jwtSecret com o número aleatório criptografado.
   }
 
-  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada generateToken que recebe o parâmetro userId do tipo string, responsável por gerar um token.
-  async generateToken(userId: string) {
+  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada generateToken que recebe o parâmetro userId do tipo string, responsável por gerar um token. O public é responsável por permitir que a função seja acessada por fora da classe.
+  public async generateToken(userId: string) {
     // Está criando uma variável chamada token que armazena o token gerado pelo jsonwebtoken.sign, que recebe três parâmetros, o sub, o JWT_SECRET e o expiresIn.
     const token = jsonwebtoken.sign(
       { sub: userId }, // O sub é responsável por extrair o id do usuário que está armazenado no token.
@@ -32,8 +32,8 @@ class TokenAuth {
     return token; // Está retornando o token.
   }
 
-  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada verifyToken que recebe o parâmetro token do tipo string, responsável por verificar se o token está correto.
-  async verifyToken(token: string) {
+  // Criado uma função assincrona(que só vai ser executada quando o await for concluído) chamada verifyToken que recebe o parâmetro token do tipo string, responsável por verificar se o token está correto. O public é responsável por permitir que a função seja acessada por fora da classe.
+  public async verifyToken(token: string) {
     // Está criando um try catch, que tenta executar o código dentro do try, se der algum erro ele executa o código dentro do catch.
     try {
       // Está desestruturando o sub do token, responsável por armazenar o id do usuário. O jsonwebtoken.verify é responsável por verificar se o token está correto, recebe dois parâmetros, o token e o JWT_SECRET, que é a chave para verificar se o token está correto.

@@ -10,13 +10,6 @@
   <img src="https://img.shields.io/static/v1?label=vite&message=5.0.8&color=FFA500&style=for-the-badge"/>
 </div>
 
-<br>
-
-<div align="right">
-  <img src="https://img.shields.io/static/v1?label=Author&message=Luiz%20Felipe%20Silva&color=blue&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=for-the-badge"/>
-</div>
-
 ## Introdução
 
 Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incríveis da natureza! Este projeto é o seu primeiro passo no mundo FullStack, combinando o poder do React no front-end com a robustez do Node.js no back-end.

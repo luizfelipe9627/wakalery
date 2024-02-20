@@ -4,6 +4,9 @@
 
 Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incríveis da natureza! Este projeto é meu primeiro passo no mundo FullStack, combinando o poder do React e TypeScript no front-end com a robustez do Node.js com TypeScript no back-end.
 
+- Backend(API): [Acessar a API](https://wakalery-api-users.onrender.com)
+- Frontend: [Acessar o Deploy](https://luizfelipe9627-wakalery.netlify.app/login)
+
 ## Funcionalidades
 
 - **Login de Usuários**: Faça login para acessar o conteúdo do Wakalery.
@@ -35,9 +38,9 @@ Bem-vindo ao Wakalery, seu portal para explorar e compartilhar fotografias incr�
 - [MongoDB](https://www.mongodb.com/)
 - [tsx](https://www.npmjs.com/package/tsx)
 
-## Instalação
+## Acesso Local 
 
-Para instalar e iniciar o projeto, siga os passos dos READMEs de cada pasta:
+Para acessar localmente o projeto basta instalar e iniciar o projeto, siga os passos dos READMEs de cada pasta:
 
 - [Backend](./backend/README.md)
 - [Frontend](./frontend/README.md)

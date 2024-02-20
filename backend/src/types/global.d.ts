@@ -1,11 +1,8 @@
-interface IUserRegister {
-  username: string;
-  email: string;
-  password: string;
-}
-
-interface IUserId {
+interface IUser {
   id: string;
+  username: string;
+  password: string;
+  token: string | null;
 }
 
 interface IUserLogin {
@@ -13,7 +10,9 @@ interface IUserLogin {
   password: string;
 }
 
-interface IPasswordAuth {
+interface IUserRegister {
+  username: string;
+  email: string;
   password: string;
-  passwordHash: string;
+  token?: string;
 }

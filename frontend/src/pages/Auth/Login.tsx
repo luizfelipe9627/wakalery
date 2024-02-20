@@ -39,9 +39,7 @@ const Login = () => {
     } catch (error: any) {
       if (!username || !password) {
         setError(error.response.data.error.replace(/^"(.*)"$/, "$1"));
-      }
-
-      if (error.response.status === 400 && username && password) {
+      } else if (error.response.status === 400 && username && password) {
         setErrorGlobal(error.response.data.error.replace(/^"(.*)"$/, "$1"));
       }
 

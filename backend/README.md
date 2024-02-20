@@ -10,13 +10,6 @@
   <img src="https://img.shields.io/static/v1?label=typescript&message=5.3.3&color=3178C6&style=for-the-badge"/>
 </div>
 
-<br>
-
-<div align="right">
-  <img src="https://img.shields.io/static/v1?label=Author&message=Luiz%20Felipe%20Silva&color=blue&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=for-the-badge"/>
-</div>
-
 ## Sumário
 
 - [Introdução](#introdução)
@@ -71,7 +64,7 @@ Para instalar e iniciar o projeto, siga os passos abaixo:
 
 A API foi projetada para ser fácil e simples de usar. Abaixo estão alguns pontos importantes para começar:
 
-- **Base URL**: O endpoint base para todas as chamadas da API é [http://localhost:3000].
+- **Base URL**: O endpoint base para todas as chamadas da API é [https://wakalery-api-users.onrender.com].
 - **Autenticação**: A API não requer autenticação para acessar os endpoints. No entanto, a autenticação pode ser necessária para acessar determinados recursos.
 - **Estrutura da resposta**: As respostas da API são retornadas em formato JSON. Os exemplos de resposta são fornecidos na documentação abaixo para cada endpoint.
 - **Códigos de status**: A API retorna os seguintes códigos de status padrão: 200, 201, 400, 404 e 500. Códigos de status personalizados podem ser retornados em determinadas situações.

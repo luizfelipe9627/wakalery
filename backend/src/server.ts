@@ -20,7 +20,8 @@ const start = async () => {
     await app.listen({
       // O port está pegando a variável de ambiente PORT(que é a porta do servidor que está na variável de ambiente da onde o servidor está hospedado) e se não tiver, ele vai usar a porta 3000.
       port: process.env.PORT ? Number(process.env.PORT) : 3000,
-      host: "0.0.0.0",
+      // Está definindo o endereço do servidor(importante ser 0.0.0.0 para ocorrer tudo bem quando for hospedado).
+      host: process.env.HOST ? process.env.HOST : "127.0.0.1",
     });
   } catch (err) {
     process.exit(1); // O process.exit(1) é responsável por fechar o servidor caso ocorra algum erro.
